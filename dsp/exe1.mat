@@ -1,0 +1,12 @@
+fs = 100  
+t= 0:1/fs:1;  
+sq = square(2*pi*2*t);
+plot(t,sq)
+sqnoise = 0.1*randn(size(sq));
+both = sq + sqnoise;
+plot(t,both)
+sig = sin(2*pi*5*t);
+plot(t,sig)
+noise = 0.3*randn(size(sig));
+sigNoisy = sig + noise;
+plot(t,sigNoisy)
